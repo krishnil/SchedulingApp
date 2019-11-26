@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <VBox layoutX="450.0" layoutY="200.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Home" textFill="#086293">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="60.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="323.0" prefWidth="1000.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Customers" textFill="#086293">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="40.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView fx:id="customerTableView" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="customerNameCol" prefWidth="117.5" text="Name" />
+                            <TableColumn fx:id="customerAddressCol" prefWidth="235.0" text="Address" />
+                              <TableColumn fx:id="customerContactCol" prefWidth="117.5" text="Contact" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="20.0" right="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="500.0">
+                           <children>
+                              <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionAddCustomer" text="Add" />
+                              <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionUpdateCustomer" text="Update">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionDeleteCustomer" text="Delete">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="500.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="500.0">
+                           <children>
+                              <Label text="Appointments" textFill="#086293">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="View">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="viewCombo" onAction="#viewChange" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="appointmentTableView" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="appTypeCol" prefWidth="117.5" text="Type" />
+                            <TableColumn fx:id="appCustomerCol" prefWidth="117.5" text="Customer" />
+                              <TableColumn fx:id="appFromCol" prefWidth="117.5" text="From" />
+                              <TableColumn fx:id="appTocol" prefWidth="117.5" text="To" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="10.0" right="20.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="500.0">
+                           <children>
+                              <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionAddAppointment" text="Add" />
+                              <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionUpdateAppointment" text="Update">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionDeleteAppointment" text="Delete">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="1000.0">
+               <children>
+                  <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionReport" text="Reports" />
+                  <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionLoginScreen" text="Logout">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

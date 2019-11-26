@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="331.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointmentController">
+   <children>
+      <HBox layoutX="87.0" layoutY="50.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="331.0" prefWidth="341.0">
+               <children>
+                  <Label text="Update Appointment" textFill="#096291">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="40.0" prefWidth="341.0">
+                     <children>
+                        <Label text="Type: ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="typeComboBox" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="341.0">
+                     <children>
+                        <Label text="Customer ID: ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="cusIdTxt" blendMode="DARKEN" editable="false" minWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="341.0">
+                     <children>
+                        <Label text="Day: ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="55.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="datePick" maxWidth="150.0" minWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="341.0">
+                     <children>
+                        <Label text="Time: ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="hourCombo" maxWidth="88.0" minWidth="40.0" prefWidth="70.0" promptText="Hour">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="341.0">
+                     <children>
+                        <Label text="Duration: ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Default (1 hour)" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="ID: ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="65.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="idTxt" blendMode="DARKEN" editable="false" minWidth="150.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="341.0">
+               <children>
+                  <Label text="Customers">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="cusTable" maxWidth="-Infinity" minWidth="300.0" prefHeight="150.0" prefWidth="300.0">
+                    <columns>
+                      <TableColumn fx:id="cusIdCol" minWidth="50.0" prefWidth="50.0" text="ID" />
+                      <TableColumn fx:id="cusNameCol" minWidth="75.0" prefWidth="250.0" text="Name" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox alignment="TOP_RIGHT" prefHeight="33.0" prefWidth="341.0">
+                     <children>
+                        <Button minWidth="60.0" mnemonicParsing="false" onAction="#linkCustomer" text="Link">
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionUpdate" text="Update" />
+                        <Button minWidth="60.0" mnemonicParsing="false" onAction="#onActionMain" text="Cancel">
+                           <HBox.margin>
+                              <Insets left="10.0" right="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
