@@ -18,3 +18,11 @@ I created a log-in form that can determine the user's location and translate the
   * Applying the localization API and date/time API in application development to support end-users in various geographical regions.
   * Incorporating advanced exception control mechanisms in application development for improving user experience and application stability.
 
+### Login Screen
+Japanese: 
+![alt text][logo]
+
+[logo]: https://github.com/krishnil/SchedulingApp/blob/master/Log-in%20screen.PNG "Log-in screen"
+
+### Main Screen
+![alt text](https://github.com/krishnil/SchedulingApp/blob/master/GUI.png "Main screen")
